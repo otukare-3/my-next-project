@@ -1,5 +1,6 @@
 import NewsList from "../_components/NewsList";
 import { getNewsList } from "../_libs/microcms";
+import SearchField from "../_components/SearchField";
 import { NEWS_LIST_LIMIT } from "../_constants";
 import Pagination from "../_components/Pagination";
 
@@ -11,6 +12,7 @@ export default async function Page() {
 
     return (
         <>
+            <SearchField />
             <NewsList news={news} />
             <Pagination totalCount={totalCount} />
         </>
